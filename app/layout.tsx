@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import { Inter } from 'next/font/google'
 import "./globals.css"
-// import { Header } from "@/components/header"
-// import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { CartProvider } from "@/components/cart-provider"
 import { Toaster } from "@/components/ui/toaster"
 
@@ -23,9 +23,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <CartProvider>
           <div className="flex min-h-screen flex-col">
-            {/* <Header /> */}
+            <Header />
             <main className="flex-1">{children}</main>
-            {/* <Footer /> */}
+            <Footer />
           </div>
           <Toaster />
         </CartProvider>
